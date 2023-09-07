@@ -1,5 +1,5 @@
 
-package exercises.exercise_1_adts_arrays;
+package exercise_1;
 
 public class testing {
     public static void main(String[] args) {

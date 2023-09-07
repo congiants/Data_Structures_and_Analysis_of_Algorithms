@@ -1,14 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
-    <groupId>exercises.exercise_1_adts</groupId>
-    <artifactId>Exercise_1_ADTS-Arrays</artifactId>
+    <groupId>exercises.exercise_2_stack_queue</groupId>
+    <artifactId>Exercise_2_Stack_Queue</artifactId>
     <version>1.0-SNAPSHOT</version>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.compiler.source>17</maven.compiler.source>
         <maven.compiler.target>17</maven.compiler.target>
-        <exec.mainClass>exercises.exercise_1_adts.Exercise_1_ADTSArrays</exec.mainClass>
+        <exec.mainClass>exercises.exercise_2_stack_queue.Exercise_2_Stack_Queue</exec.mainClass>
     </properties>
-    <name>Exercise_1_ADTS_Arrays</name>
 </project>

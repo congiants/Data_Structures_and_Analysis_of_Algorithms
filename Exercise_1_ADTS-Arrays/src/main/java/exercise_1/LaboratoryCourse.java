@@ -1,4 +1,4 @@
-package exercises.exercise_1_adts_arrays;
+package exercise_1;
 
 public class LaboratoryCourse implements LaboratoryCourseInterface{
         private String name;

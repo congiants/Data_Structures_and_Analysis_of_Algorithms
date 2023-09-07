@@ -1,4 +1,4 @@
-package exercises.exercise_1_adts_arrays;
+package queue;
 
 public class Student {
     
@@ -73,7 +73,3 @@ public class Student {
         System.out.println("ID: "+ studId + " Name: " +fullName+ " Age: " + age + " Gender: " +gender+ " Absences: " + absences + " Score: " + score);
     }
 }
-
-//public static void main(String[] args) {
-//        System.out.println("Hello World!");
-//    }
