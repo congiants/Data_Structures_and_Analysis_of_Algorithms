@@ -16,6 +16,18 @@ public class BSTree {
             root = new TreeNode(data);   
 	else  insertNode(data,root); 
     }
+    
+    private void insertNode(int data, TreeNode node) {
+        if (data < node.getData()){
+            if (node.getLeft() == null) node.setLeft(new TreeNode(data));
+            else insertNode(data, node.getLeft());
+        }
+        
+        else{
+            if (node.getRight() == null) node.setRight(new TreeNode(data));
+            else insertNode(data, node.getRight());
+        }
+    }
 
     public void inOrderTraversal( ) { 
 	System.out.println("INORDER TRAVERSAL");   
@@ -33,18 +45,6 @@ public class BSTree {
 	System.out.println("POSTORDER TRAVERSAL");   
 	postOrder(root);   
 	System.out.println();
-    }
-    
-    private void insertNode(int data, TreeNode node) {
-        if (data < node.getData()){
-            if (node.getLeft() == null) node.setLeft(new TreeNode(data));
-            else insertNode(data, node.getLeft());
-        }
-        
-        else{
-            if (node.getRight() == null) node.setRight(new TreeNode(data));
-            else insertNode(data, node.getRight());
-        }
     }
     
     private void inOrder(TreeNode node){

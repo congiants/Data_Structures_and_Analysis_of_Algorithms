@@ -1,5 +1,7 @@
 package heap;
 
+import java.util.Arrays;
+
 public class testing {
 
     public static void main(String[] args) {
@@ -27,23 +29,7 @@ public class testing {
         h.printHeap();
         
         System.out.println("=======");
-        System.out.println(h.remove());
-        //h.printHeap();
-        
-        System.out.println(h.remove());
-        //h.printHeap();
-        System.out.println(h.remove());
-       // h.printHeap();
-       System.out.println(h.remove());
-        //h.printHeap();
-        System.out.println(h.remove());
-       // h.printHeap();
-       System.out.println(h.remove());
-     System.out.println(h.remove());
-       System.out.println(h.remove());
-       System.out.println(h.remove());
-             //System.out.println(h.remove());
-                     //System.out.println(h.remove());
-                            //System.out.println(h.remove());
+        Object t = h.Hsort();
+        System.out.println(Arrays.toString(h.Hsort()));
     }
 }

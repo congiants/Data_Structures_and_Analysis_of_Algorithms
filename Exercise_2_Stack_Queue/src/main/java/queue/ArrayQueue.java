@@ -46,8 +46,7 @@ public class ArrayQueue implements Queue{
     @Override
     public Object dequeue() throws QueueEmptyException {
         if (isEmpty()) throw new QueueEmptyException("Queue is empty");
-        Object item;
-        item = queue[first];
+        Object item = queue[first];
         queue[first++] = null;
         return item;
     }

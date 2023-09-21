@@ -36,13 +36,12 @@ public class Heap implements HeapInterface{
         if (isFull()) throw new HeapFullException("Heap is full");
         index++;
         btree[index] = item;
-        System.out.println(index);
         if (index >1){
             int father = index /2;
             int son = index;
             Comparable coFather = (Comparable)btree[father];
             Comparable coSon = (Comparable)btree[son];            
-            while(coFather.compareTo(coSon) < 0){
+            while(father >= 1 && coFather.compareTo(coSon) < 0){
                 Object tempO = btree[father];
                 btree[father] = btree[son];
                 btree[son] = tempO;
@@ -50,7 +49,6 @@ public class Heap implements HeapInterface{
                 father = son/2;
                 coFather = (Comparable)btree[father];
                 coSon = (Comparable)btree[son];
-                if (son <=1)break;
             }
         }
     }
@@ -84,7 +82,37 @@ public class Heap implements HeapInterface{
                 }
             }
             return removeObject;
-    }    
+    }
+
+    public Object[] Hsort() throws HeapEmptyException{
+        if (isEmpty()) throw new HeapEmptyException("Heap is empty");
+        Object temp[] = new Object[size()-1];
+        int k =0;
+        for (int i =0; i < btree.length; i++){
+            if(btree[i]!= null){
+                temp[k] = btree[i];
+                k++;
+                if (temp[size()-2] != null) break;
+            }
+        }
+        Object max = temp[0];
+        int pos = 0;
+        for (int i =0; i < temp.length; i++){
+            for (int z =0; z < temp.length; z++){
+                max = temp[i];
+                Comparable coMax = (Comparable)max;
+                Comparable coTemp = (Comparable)temp[z];
+                    if (coMax.compareTo(coTemp) < 0){
+                        max  = temp[k];
+                        pos= k;
+                    }
+                }
+            Object t = temp[i];
+            temp[i]= max;
+            temp[pos] = t;
+        }
+        return temp;
+    }
     /*
      10
      /   \
